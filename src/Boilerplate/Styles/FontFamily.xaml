@@ -1,0 +1,18 @@
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <OnPlatform x:Key="RobotoRegular"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Regular.ttf#Roboto"
+                iOS="Roboto-Regular" />
+    <OnPlatform x:Key="RobotoBold"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Bold.ttf#Roboto"
+                iOS="Roboto-Bold" />
+    <OnPlatform x:Key="RobotoItalic"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Italic.ttf#Roboto"
+                iOS="Roboto-Italic" />
+    <OnPlatform x:Key="RobotoMedium"
+                x:TypeArguments="x:String"
+                Android="Fonts/Roboto-Medium.ttf#Roboto"
+                iOS="Roboto-Medium" />
+</ResourceDictionary>

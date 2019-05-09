@@ -1,13 +1,15 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Android", "Boilerplate.Android\Boilerplate.Android.csproj", "{03E27DD7-D67F-4543-871A-E7FB7F4CD8AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Android", "src\Boilerplate.Android\Boilerplate.Android.csproj", "{03E27DD7-D67F-4543-871A-E7FB7F4CD8AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.iOS", "Boilerplate.iOS\Boilerplate.iOS.csproj", "{11781C3E-17D0-47AE-9850-860680560244}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.iOS", "src\Boilerplate.iOS\Boilerplate.iOS.csproj", "{11781C3E-17D0-47AE-9850-860680560244}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.UITests", "Boilerplate.UITests\Boilerplate.UITests.csproj", "{B19C892E-2628-4CA7-AD27-08D406A3B14B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.UITests", "src\Boilerplate.UITests\Boilerplate.UITests.csproj", "{B19C892E-2628-4CA7-AD27-08D406A3B14B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate", "Boilerplate\Boilerplate.csproj", "{6174D579-CA56-40AA-923E-681322762AFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate", "src\Boilerplate\Boilerplate.csproj", "{6174D579-CA56-40AA-923E-681322762AFB}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Boilerplate.Shared", "src\Boilerplate.Shared\Boilerplate.Shared.shproj", "{282F7096-EF05-4777-9B03-18011843E597}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,5 +87,11 @@ Global
 		{6174D579-CA56-40AA-923E-681322762AFB}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
 		{6174D579-CA56-40AA-923E-681322762AFB}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
 		{6174D579-CA56-40AA-923E-681322762AFB}.AppStore|iPhone.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		BaseDirectory = .
+		Policies = $0
+		$0.StandardHeader = $1
+		$0.VersionControlPolicy = $2
 	EndGlobalSection
 EndGlobal
