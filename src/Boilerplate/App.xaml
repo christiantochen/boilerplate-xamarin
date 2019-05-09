@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application x:Class="Boilerplate.App"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:styles="clr-namespace:Boilerplate.Styles">
+    <Application.Resources>
+        <StyleSheet Source="/Styles/App.css" />
+        <ResourceDictionary MergedWith="styles:Base" />
+        <ResourceDictionary MergedWith="styles:Converters" />
+        <Style x:Key="ErrorLabel" TargetType="{x:Type Label}">
+            <Setter Property="FontSize" Value="{StaticResource SmallSize}" />
+            <Setter Property="HorizontalOptions" Value="End" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="TextColor" Value="{StaticResource InvalidColor}" />
+        </Style>
+    </Application.Resources>
+</Application>

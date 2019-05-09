@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage x:Class="Boilerplate.Popups.TopMenuPopup"
+                 xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:controls="clr-namespace:Boilerplate.Controls"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 CloseWhenBackgroundIsClicked="true"
+                 HasSystemPadding="false">
+    <pages:PopupPage.Animation>
+        <animations:MoveAnimation PositionIn="Top" PositionOut="Top" />
+    </pages:PopupPage.Animation>
+    <pages:PopupPage.Content>
+        <StackLayout Padding="16,32,16,16"
+                     BackgroundColor="#212C37"
+                     Orientation="Horizontal"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Start">
+            <Label Text="Version 1.0" TextColor="White" />
+        </StackLayout>
+    </pages:PopupPage.Content>
+</pages:PopupPage>

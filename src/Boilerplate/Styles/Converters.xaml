@@ -1,0 +1,7 @@
+<ResourceDictionary x:Class="Boilerplate.Styles.Converters"
+                    xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:converters="clr-namespace:Boilerplate.Converters">
+    <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+    <converters:ValidatableObjectErrorMessageConverter x:Key="ValidatableObjectErrorMessageConverter" />
+</ResourceDictionary>
