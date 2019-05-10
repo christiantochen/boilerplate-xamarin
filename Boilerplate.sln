@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.UITests", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate", "src\Boilerplate\Boilerplate.csproj", "{6174D579-CA56-40AA-923E-681322762AFB}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Boilerplate.Shared", "src\Boilerplate.Shared\Boilerplate.Shared.shproj", "{282F7096-EF05-4777-9B03-18011843E597}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate.Shared", "src\Boilerplate.Shared\Boilerplate.Shared.shproj", "{282F7096-EF05-4777-9B03-18011843E597}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

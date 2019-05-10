@@ -1,0 +1,57 @@
+﻿{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Christianto Chen",
+  "classifications": [ "Xamarin.Forms" ],
+  "description": "Christianto Chen Xamarin Forms Starter Kit, Please uncheck 'Create a project directory within solution directory'.",
+  "name": "Xamarin Forms Starter Kit",
+  "defaultName": "Boilerplate",
+  "identity": "Xamarin.Forms.Boilerplate.CSharp",
+  "groupIdentity": "Xamarin.Forms.Boilerplate",
+  "tags": {
+    "language": "C#",
+    "type": "project",
+    "vsmac-category": "multiplat/app/forms"
+  },
+  "shortName": "boilerplate",
+  "sourceName": "Boilerplate",
+  "guids": [
+    "{6174D579-CA56-40AA-923E-681322762AFB}",
+    "{03E27DD7-D67F-4543-871A-E7FB7F4CD8AF}",
+    "{11781C3E-17D0-47AE-9850-860680560244}",
+    "{B19C892E-2628-4CA7-AD27-08D406A3B14B}",
+    "{282F7096-EF05-4777-9B03-18011843E597}"
+  ],
+  "sources": [
+    {
+      "source": "./src/",
+      "target": "./src/",
+      "modifiers": [
+        {
+          "exclude": [
+            ".vs/**/*",
+            ".git/**/*",
+            ".gitignore"
+          ]
+        }
+      ]
+    }
+  ],
+  "preferNameDirectory": false,
+  "primaryOutputs": [
+    {
+      "path": "src/Boilerplate/Boilerplate.csproj"
+    },
+    {
+      "path": "src/Boilerplate.Android/Boilerplate.Android.csproj"
+    },
+    {
+      "path": "src/Boilerplate.iOS/Boilerplate.iOS.csproj"
+    },
+    {
+      "path": "src/Boilerplate.UITests/Boilerplate.UITests.csproj"
+    },
+    {
+      "path": "src/Boilerplate.Shared/Boilerplate.Shared.shproj"
+    }
+  ]
+}
