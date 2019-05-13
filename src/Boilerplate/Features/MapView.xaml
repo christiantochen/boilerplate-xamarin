@@ -2,12 +2,17 @@
 <ContentPage x:Class="Boilerplate.Features.MapView"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              Title="{Binding Title}"
              Icon="{Binding Icon}">
     <ContentPage.Resources>
         <ResourceDictionary />
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Button Text="Menu Popup" Command="{Binding TopMenuPopupCommand}" />
+        <Grid>
+            <maps:Map x:Name="map"
+                      InitialCameraUpdate="-23.68, -46.87, 13, 30, 60"
+                      VerticalOptions="FillAndExpand" />
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -2,6 +2,7 @@
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
+using Boilerplate.Shared;
 using Xamarin.Forms.Platform.Android;
 
 namespace Boilerplate.Droid
@@ -19,6 +20,7 @@ namespace Boilerplate.Droid
 
             Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Xamarin.FormsGoogleMaps.Init(this, savedInstanceState);
             Acr.UserDialogs.UserDialogs.Init(this);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
 
