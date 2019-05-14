@@ -7,6 +7,9 @@ namespace Boilerplate.Features
         public MapView()
         {
             InitializeComponent();
+
+            map.UiSettings.MyLocationButtonEnabled = true;
+            map.UiSettings.ZoomControlsEnabled = false;
         }
 
         protected override async void OnAppearing()

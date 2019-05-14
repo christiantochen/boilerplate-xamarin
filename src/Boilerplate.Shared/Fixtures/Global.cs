@@ -14,5 +14,6 @@
         public const string LOCALHOST_IP = "http://10.0.2.2:8000/api";
         /**/
         public const string GOOGLE_MAPS_ANDROID_API_KEY = "AIzaSyDEIya9neJzDN6usNgbER1dSTMHLv-twAg";
+        public const string GOOGLE_MAPS_IOS_API_KEY = "AIzaSyDEIya9neJzDN6usNgbER1dSTMHLv-twAg";
     }
 }

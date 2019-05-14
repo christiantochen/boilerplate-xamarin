@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿using Boilerplate.Shared;
+using Foundation;
 using UIKit;
 using Xamarin;
 using Xamarin.Forms;
@@ -18,15 +19,16 @@ namespace Boilerplate.iOS
         //
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        public override bool FinishedLaunching(UIApplication uiApplication, NSDictionary launchOptions)
         {
             Calabash.Start();
             Forms.Init();
 
+            FormsGoogleMaps.Init(Fixtures.GOOGLE_MAPS_IOS_API_KEY);
 
             LoadApplication(new App());
 
-            return base.FinishedLaunching(app, options);
+            return base.FinishedLaunching(uiApplication, launchOptions);
         }
     }
 }

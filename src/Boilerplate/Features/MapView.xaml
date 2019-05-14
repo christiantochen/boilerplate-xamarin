@@ -11,7 +11,10 @@
     <ContentPage.Content>
         <Grid>
             <maps:Map x:Name="map"
-                      InitialCameraUpdate="-23.68, -46.87, 13, 30, 60"
+                      HasZoomEnabled="false"
+                      InitialCameraUpdate="{Binding InitialCameraPosition}"
+                      IsShowingUser="{Binding IsShowingUser}"
+                      MyLocationEnabled="{Binding MyLocationEnabled}"
                       VerticalOptions="FillAndExpand" />
         </Grid>
     </ContentPage.Content>

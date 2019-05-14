@@ -17,6 +17,7 @@ namespace Boilerplate
             InitializeComponent();
             InitializeNavigation();
         }
+
         static void BuildDependencies()
         {
             Preferences.UseFakes = true;

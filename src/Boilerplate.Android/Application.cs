@@ -13,5 +13,11 @@ namespace Boilerplate.Droid
             : base(javaReference, transfer)
         {
         }
+
+        public override void OnCreate()
+        {
+            base.OnCreate();
+            Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this);
+        }
     }
 }

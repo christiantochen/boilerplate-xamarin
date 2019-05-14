@@ -1,5 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage x:Class="Boilerplate.Features.LoginView" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:behaviors="clr-namespace:Boilerplate.Behaviors" xmlns:controls="clr-namespace:Boilerplate.Controls" xmlns:ext="clr-namespace:Boilerplate.Extensions" xmlns:shared="clr-namespace:Boilerplate.Shared" Title="{Binding Title}" BackgroundColor="{StaticResource LoginBackgroundColor}">
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="Boilerplate.Features.LoginView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:Boilerplate.Behaviors"
+             xmlns:controls="clr-namespace:Boilerplate.Controls"
+             xmlns:ext="clr-namespace:Boilerplate.Extensions"
+             xmlns:shared="clr-namespace:Boilerplate.Shared"
+             Title="{Binding Title}"
+             BackgroundColor="{StaticResource LoginBackgroundColor}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="LoginBackgroundColor">#FAFAFA</Color>
@@ -10,10 +18,14 @@
                 <Setter Property="LineColor" Value="{StaticResource LoginPrimaryColor}" />
                 <Setter Property="Padding" Value="12" />
             </Style>
-            <Style x:Key="ErrorLabel" BasedOn="{StaticResource ErrorLabel}" TargetType="{x:Type Label}">
+            <Style x:Key="ErrorLabel"
+                   BasedOn="{StaticResource ErrorLabel}"
+                   TargetType="{x:Type Label}">
                 <Setter Property="Margin" Value="12,0" />
             </Style>
-            <Style x:Key="LoginButton" BasedOn="{StaticResource Xamarin.Forms.Button}" TargetType="{x:Type Button}">
+            <Style x:Key="LoginButton"
+                   BasedOn="{StaticResource Xamarin.Forms.Button}"
+                   TargetType="{x:Type Button}">
                 <Setter Property="BackgroundColor" Value="#A0000000" />
                 <Setter Property="Margin" Value="24" />
                 <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
@@ -22,24 +34,63 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <AbsoluteLayout>
-            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Spacing="0" VerticalOptions="FillAndExpand">
-                <Label Margin="12,24" FontFamily="{StaticResource RobotoBold}" FontSize="{StaticResource LargerSize}" Text="{ext:Translate WelcomeBack}" TextColor="{StaticResource LoginPrimaryColor}" />
-                <controls:ExtendedEntry x:Name="UsernameEntry" AutomationId="{x:Static shared:AutomationId.LoginView_UsernameEntry}" IsValid="{Binding Username.IsValid, Mode=TwoWay}" Keyboard="Text" Placeholder="{ext:Translate Username}" ReturnType="Next" TabIndex="1" Text="{Binding Username.Value, Mode=TwoWay}">
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         Spacing="0"
+                         VerticalOptions="FillAndExpand">
+                <Label Margin="12,24"
+                       FontFamily="{StaticResource RobotoBold}"
+                       FontSize="{StaticResource LargerSize}"
+                       Text="{ext:Translate WelcomeBack}"
+                       TextColor="{StaticResource LoginPrimaryColor}" />
+                <controls:ExtendedEntry x:Name="UsernameEntry"
+                                        AutomationId="{x:Static shared:AutomationId.LoginView_UsernameEntry}"
+                                        IsValid="{Binding Username.IsValid, Mode=TwoWay}"
+                                        Keyboard="Text"
+                                        Placeholder="{ext:Translate Username}"
+                                        ReturnType="Next"
+                                        TabIndex="1"
+                                        Text="{Binding Username.Value, Mode=TwoWay}">
                     <controls:ExtendedEntry.Behaviors>
-                        <behaviors:EventToCommand Command="{Binding ValidateCommand}" CommandParameter="{Binding Username}" EventName="Unfocused" />
+                        <behaviors:EventToCommand Command="{Binding ValidateCommand}"
+                                                  CommandParameter="{Binding Username}"
+                                                  EventName="Unfocused" />
                     </controls:ExtendedEntry.Behaviors>
                 </controls:ExtendedEntry>
-                <Label AutomationId="{x:Static shared:AutomationId.LoginView_UsernameErrorLabel}" IsVisible="{Binding Path=IsValid, Source={Reference UsernameEntry}, Converter={StaticResource InverseBooleanConverter}}" Style="{StaticResource ErrorLabel}" Text="{Binding Username.Errors, Converter={StaticResource ValidatableObjectErrorMessageConverter}}" />
-                <controls:ExtendedEntry x:Name="PasswordEntry" AutomationId="{x:Static shared:AutomationId.LoginView_PasswordEntry}" IsPassword="true" IsTabStop="true" IsValid="{Binding Password.IsValid, Mode=TwoWay}" Placeholder="{ext:Translate Password}" TabIndex="2" Text="{Binding Password.Value, Mode=TwoWay}">
+                <Label AutomationId="{x:Static shared:AutomationId.LoginView_UsernameErrorLabel}"
+                       IsVisible="{Binding Path=IsValid, Source={Reference UsernameEntry}, Converter={StaticResource InverseBooleanConverter}}"
+                       Style="{StaticResource ErrorLabel}"
+                       Text="{Binding Username.Errors, Converter={StaticResource ValidatableObjectErrorMessageConverter}}" />
+                <controls:ExtendedEntry x:Name="PasswordEntry"
+                                        AutomationId="{x:Static shared:AutomationId.LoginView_PasswordEntry}"
+                                        IsPassword="true"
+                                        IsTabStop="true"
+                                        IsValid="{Binding Password.IsValid, Mode=TwoWay}"
+                                        Placeholder="{ext:Translate Password}"
+                                        TabIndex="2"
+                                        Text="{Binding Password.Value, Mode=TwoWay}">
                     <controls:ExtendedEntry.Behaviors>
-                        <behaviors:EventToCommand Command="{Binding ValidateCommand}" CommandParameter="{Binding Password}" EventName="Unfocused" />
+                        <behaviors:EventToCommand Command="{Binding ValidateCommand}"
+                                                  CommandParameter="{Binding Password}"
+                                                  EventName="Unfocused" />
                         <behaviors:EventToCommand Command="{Binding LoginCommand}" EventName="Completed" />
                     </controls:ExtendedEntry.Behaviors>
                 </controls:ExtendedEntry>
-                <Label AutomationId="{x:Static shared:AutomationId.LoginView_PasswordErrorLabel}" IsVisible="{Binding Path=IsValid, Source={Reference PasswordEntry}, Converter={StaticResource InverseBooleanConverter}}" Style="{StaticResource ErrorLabel}" Text="{Binding Password.Errors, Converter={StaticResource ValidatableObjectErrorMessageConverter}}" />
-                <Button x:Name="LoginButton" AutomationId="{x:Static shared:AutomationId.LoginView_LoginButton}" Command="{Binding LoginCommand}" Style="{StaticResource LoginButton}" Text="{ext:Translate Login}" />
+                <Label AutomationId="{x:Static shared:AutomationId.LoginView_PasswordErrorLabel}"
+                       IsVisible="{Binding Path=IsValid, Source={Reference PasswordEntry}, Converter={StaticResource InverseBooleanConverter}}"
+                       Style="{StaticResource ErrorLabel}"
+                       Text="{Binding Password.Errors, Converter={StaticResource ValidatableObjectErrorMessageConverter}}" />
+                <Button x:Name="LoginButton"
+                        AutomationId="{x:Static shared:AutomationId.LoginView_LoginButton}"
+                        Command="{Binding LoginCommand}"
+                        Style="{StaticResource LoginButton}"
+                        Text="{ext:Translate Login}" />
             </StackLayout>
-            <controls:LoadingLayout x:Name="LoadingLayout" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" IsRunning="{Binding IsBusy}" VerticalOptions="FillAndExpand" />
+            <controls:LoadingLayout x:Name="LoadingLayout"
+                                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                    AbsoluteLayout.LayoutFlags="All"
+                                    IsRunning="{Binding IsBusy}"
+                                    VerticalOptions="FillAndExpand" />
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
